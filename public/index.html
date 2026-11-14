@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lucky Travelling Co. | Home</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/">Lucky <span>Travelling Co.</span></a>
+<nav><a href="#home">Home</a><a href="#services">Services</a><a href="#booking">Book Now</a><a href="#contact">Contact</a><a href="my-bookings.html">My Bookings</a><a href="login.html" id="loginLink">Login</a><button id="logoutBtn" class="linkbtn hidden">Logout</button></nav></header>
+<main>
+<section class="hero" id="home"><div><p class="eyebrow">SAFE • RELIABLE • ON TIME</p><h1>Moving people<br>and goods with care.</h1><p>Book passenger travel or goods transport with Lucky Travelling Co.</p><a class="btn" href="#booking">Book your vehicle</a></div><div class="hero-card"><div class="round-icon">🚚</div><h3>One place for every journey</h3><p>Local trips, group travel and loading vehicle requests.</p></div></section>
+<section class="section" id="services"><p class="eyebrow">OUR SERVICES</p><h2>Choose what you need</h2><div class="cards">
+<article class="card"><div class="icon">🚛</div><h3>Goods Transport</h3><p>Pickup, Tata Ace, Bolero Pickup, Eicher and multi-wheel loading vehicles.</p><a href="#booking" class="textlink" data-service="Transport">Book goods transport →</a></article>
+<article class="card"><div class="icon">🚕</div><h3>Passenger Travel</h3><p>Auto, taxi and 4, 5, 12, 22, 36 or 40-seater vehicles.</p><a href="#booking" class="textlink" data-service="Travelling">Book a trip →</a></article>
+<article class="card"><div class="icon">📍</div><h3>Pickup to Destination</h3><p>Share your route and travel date. Our team will contact you to confirm.</p><a href="#booking" class="textlink">Plan your route →</a></article>
+</div></section>
+<section class="section booking-section" id="booking"><div><p class="eyebrow">BOOKING REQUEST</p><h2>Where can we take you?</h2><p class="muted">Submit a request. Payment is collected offline at the agreed pickup/location. Your booking is not confirmed until our team contacts you.</p></div>
+<form id="bookingForm" class="form-card">
+<div class="grid"><label>Customer name *<input name="customer_name" required></label><label>Mobile number *<input name="phone" type="tel" required pattern="[0-9+ -]{8,15}"></label>
+<label>Service type *<select name="service" id="service" required><option value="Transport">Goods Transport</option><option value="Travelling">Passenger Travel</option></select></label>
+<label>Vehicle *<select name="vehicle" id="vehicle" required></select></label>
+<label>Pickup location *<input name="pickup" required></label><label>Destination *<input name="destination" required></label>
+<label>Date *<input name="travel_date" type="date" required></label><label>Passengers / load details<input name="passengers" type="number" min="1" value="1"></label></div>
+<label>Additional details<textarea name="notes" rows="3" placeholder="Luggage, goods type, timing, etc."></textarea></label>
+<div class="offline-note">PAYMENT: OFFLINE — no online payment is collected on this website.</div>
+<button class="btn full" type="submit">Send booking request</button><p id="bookingMessage" class="message" aria-live="polite"></p></form></section>
+<section class="section contact" id="contact"><p class="eyebrow">GET IN TOUCH</p><h2>Let’s plan your journey.</h2><p>Call us or send your question on WhatsApp.</p><a class="btn secondary" id="contactWhatsApp" target="_blank" rel="noopener">Chat on WhatsApp</a><p class="small">Replace the WhatsApp number in <code>public/app.js</code> with your business number.</p></section>
+</main><footer>© <span id="year"></span> Lucky Travelling Co. All rights reserved.</footer>
+<script src="app.js"></script></body></html>
